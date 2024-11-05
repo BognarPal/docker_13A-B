@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: HTML - Docker Image CI
 
 on:
   workflow_dispatch:
@@ -26,5 +26,6 @@ jobs:
     
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag ghcr.io/bognarpal/joke-client:0.2                
-        docker push ghcr.io/bognarpal/joke-client:0.2
+        cd html
+        docker build . --file Dockerfile --tag ghcr.io/bognarpal/joke-client:0.3                
+        docker push ghcr.io/bognarpal/joke-client:0.3
